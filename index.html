@@ -1,55 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>George Swift - Student Web Developer</title>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Header section -->
     <header class="header">
-      <nav class="header__nav">:wave: Hey! I'm George Swift</nav>
-      <h1 class="header__heading">A Junior Software Developer based in Bristol.</h1>
+        <nav class="header__nav">:wave:Hey! I'm George Swift</nav>
+        <h1 class="header__heading">
+        A Junior Software Developer based in Bristol.
+        </h1>
     </header>
+    <!-- main content of the page -->
     <main>
-      <section class="about-me">
+    <!-- The about me section of the page -->
+    <section class="about-me">
         <h2 class="about-me__h2">About me</h2>
         <figure class="about-me__figure">
-            <img class="about-me__photo"
-              src="https://place.dog/300/200"
-              alt="A photo showing the author, George Swift."
-            />
+            <img class="about-me__photo" src="https://place.dog/300/200" alt="A photo showing the author, George Swift."/>
         </figure>
-        
+        <!-- container for about me text -->
         <div class="about-me__text-content">
-            <p class="about-me__paragraph">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-              mollitia soluta dolores exercitationem excepturi maxime in ut,
-              nesciunt modi totam veniam molestiae perspiciatis omnis fugiat!
-              Inventore, voluptas error. Eaque, non.
-            </p>
-            <p class="about-me__paragraph about-me__paragraph--two">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error
-              expedita esse perspiciatis qui suscipit magni, excepturi, aspernatur,
-              sunt voluptas iste illum? Excepturi ut placeat, et voluptatibus
-              assumenda asperiores veniam?
-            </p>
+            <p class="about-me__paragraph-one">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia soluta dolores exercitationem excepturi maxime in ut,           nesciunt modi totam veniam molestiae perspiciatis omnis fugiat!Inventore, voluptas error. Eaque, non.</p>
+            <p class="about-me__paragraph-two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error expedita esse perspiciatis qui suscipit magni, excepturi, pernatur, sunt voluptas iste illum? Excepturi ut placeat, etvoluptatibus assumenda asperiores veniam?</p>
         </div>
-      </section>
-      <section class="technical-skills">
-        <h3 class="technical-skills__header"></h3>
-        <p class="technical-skills_paragraph"></p>
-        <figure class="technical-skills_figure">
-         
-            
-    
+    </section>
+    <!-- Technical skills page section -->
+    <section class="technical-skills">
+        <h3 class="h3 technical-skills__header">Technical Skills</h3>
+        <p class="p technical-skills__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo boriosam eius, accusantium odit quis voluptates a consequuntur     aliquam? Nihil aliquam cumque repudiandae eveniet saepe expedita dolorsequi ea reiciendis tempora!</p>
+        <!-- 3x3 icon grid for technical skills section  -->
+        <figure class="technical-skills__icon-grid">
+            <!-- container for one icon item including image and caption -->
+            <div class="icon-grid__container icon-grid__container--spring">
+            <!-- icon logo img -->
+                <img class="icon-grid__icon icon-grid__icon--spring" src="images\icons\spring-boot.svg" alt="The logo of spring boot."/>
+            <!-- icon img caption -->
+                <figcaption class="icon-grid__caption caption--spring">Spring Boot</figcaption>
+            </div>
 
+            <div class="icon-grid__container icon-grid__container--java">
+                <img class="icon-grid__icon icon-grid__icon--java" src="images\icons\java.svg" alt="The logo of Java." />
+                <figcaption class="icon-grid__caption caption--java">Java</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--react">
+                <img                class="icon-grid__icon icon-grid__icon--react"                src="images\icons\react.svg"                alt="The logo of react."                />
+                <figcaption class="icon-grid__caption caption--react">              React                </figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--bem">
+                <img class="icon-grid__icon icon-grid__icon--bem" src="images\icons\bem.svg" alt="The logo of Block element modifier BEM"/>
+                <figcaption class="icon-grid__caption caption--bem">BEM</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--scss">
+                <img class="icon-grid__icon icon-grid__icon--scss" src="images\icons\file-type-scss.svg" alt="The logo of Sassy Cascading Style Sheets (SCSS)."/>
+                <figcaption class="icon-grid__caption caption--scss">SCSS</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--javascript">
+                <img class="icon-grid__icon icon-grid__icon--javascript" src="images\icons\javascript.svg" alt="The logo of Javascript."/>
+                <figcaption class="icon-grid__caption caption--javascript">Javascript</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--css3">
+                <img class="icon-grid__icon icon-grid__icon--css3" src="images\icons\alternate-css3-logo.svg" alt="The logo of Cascading stylesheet level 3 (CSS3)."/>
+                <figcaption class="icon-grid__caption caption--css3">CSS3</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--html5">
+                <img class="icon-grid__icon icon-grid__icon--html5" src="images\icons\html-5-logo.svg" alt="The logo of HyperText Maruk-up language 5."/>
+                <figcaption class="icon-grid__caption caption--html5">HTML5</figcaption>
+            </div>
+
+            <div class="icon-grid__container icon-grid__container--Git">
+                <img class="icon-grid__icon icon-grid__icon--Git" src="images\icons\git.svg" alt="The logo of Git."/>
+                <figcaption class="icon-grid__caption caption--Git">Git</figcaption>
+            </div>
         </figure>
+    </section>
+    <section class="My-projects-section">
+        
 
 
-
-      </section>
+    </section>
     </main>
   </body>
 </html>
