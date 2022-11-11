@@ -5,37 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/a62cfe0090.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sass/style.css" />
     <title>George Swift - Student Web Developer</title>
 </head>
 <body>
     <!-- top banner -->
+    
     <!-- top banner container -->
     <div class="top-banner show--large-screen" id="home">
         <!-- top banner logo(name) -->
         <p class="top-banner__logo">George Swift</p>
         <!-- top banner navigation menu -->
-        <nav class="top-banner__navigation-menu">
+        <nav class="top-banner__navigation-menu navigation-menu">
             <!-- navigation links -->
-            <a class="navigation-menu__link navigation-menu__link--home" href="#home">Home</a>
-            <a class="navigation-menu__link navigation-menu__link--about" href="#about-me">About</a>
-            <a class="navigation-menu__link navigation-menu__link--projects" href="#my-projects">Projects</a>
-            <a class="navigation-menu__link navigation-menu__link--Get-in-Touch" href="#contact-me">Get in Touch</a>
+            <a class="navigation-menu__link link-home" href="#home">Home</a>
+            <a class="navigation-menu__link link-about" href="#about-me">About</a>
+            <a class="navigation-menu__link link-projects" href="#my-projects">Projects</a>
+            <a class="navigation-menu__link link-get-in-touch" href="#contact-me">Get in Touch</a>
         </nav>
     </div>
     <!-- Header section -->
     <header class="header">
-        <p class="header__greeting-text">&#128075;Hey! I'm George Swift</p>
-        <h1 class="header__heading">
-        A Junior Software Developer based in Bristol.
-        </h1>
+        <div class="header_text-container">
+            <p class="header__greeting-text">&#128075;Hey! I'm George Swift</p>
+            <h1 class="header__heading">
+            A Junior Software Developer based in Bristol.
+            </h1>
+        </div>
         <img class="header__image show--large-screen" src="https://place.dog/300/200" alt="An image showing a front-end developer sat down typing on a laptop">
     </header>
     <!-- main content of the page -->
     <main>
     <!-- The about me section of the page -->
     <section class="about-me" id="about-me">
-        <h2 class="about-me__h2">About me</h2>
+        <h2 class="about-me__header">About me</h2>
         <figure class="about-me__figure">
             <img class="about-me__photo" src="https://place.dog/300/200" alt="A photo showing the author, George Swift."/>
         </figure>
@@ -47,130 +50,130 @@
     </section>
     <!-- Technical skills page section -->
     <section class="technical-skills">
-        <h3 class="h3 technical-skills__header">Technical Skills</h3>
-        <p class="p technical-skills__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo boriosam eius, accusantium odit quis voluptates a consequuntur     aliquam? Nihil aliquam cumque repudiandae eveniet saepe expedita dolorsequi ea reiciendis tempora!</p>
+        <h3 class="technical-skills__header">Technical Skills</h3>
+        <p class="technical-skills__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo boriosam eius, accusantium odit quis voluptates a consequuntur     aliquam? Nihil aliquam cumque repudiandae eveniet saepe expedita dolorsequi ea reiciendis tempora!</p>
         <!-- 3x3 icon grid for technical skills section  -->
-        <figure class="technical-skills__icon-grid">
+        <figure class="icon-grid">
             <!-- container for one icon item including image and caption -->
             <!-- container for spring icon and caption -->
-            <div class="icon-grid__container icon-grid__container--spring">
+            <div class="icon-grid__container container-spring">
             <!-- icon logo img -->
-                <img class="icon-grid__icon icon-grid__icon--spring" src="images\icons\spring-boot.svg" alt="The logo of spring boot."/>
+                <img class="icon-grid__icon icon-spring" src="images\icons\spring-boot.svg" alt="The logo of spring boot."/>
             <!-- icon img caption -->
-                <figcaption class="icon-grid__caption caption--spring">Spring Boot</figcaption>
+                <figcaption class="icon-grid__caption caption-spring">Spring Boot</figcaption>
             </div>
             <!-- container for java icon and caption -->
-            <div class="icon-grid__container icon-grid__container--java">
-                <img class="icon-grid__icon icon-grid__icon--java" src="images\icons\java.svg" alt="The logo of Java." />
-                <figcaption class="icon-grid__caption caption--java">Java</figcaption>
+            <div class="icon-grid__container container-java">
+                <img class="icon-grid__icon icon-java" src="images\icons\java.svg" alt="The logo of Java." />
+                <figcaption class="icon-grid__caption caption-java">Java</figcaption>
             </div>
             <!-- container for react icon and caption -->
-            <div class="icon-grid__container icon-grid__container--react">
-                <img class="icon-grid__icon icon-grid__icon--react" src="images\icons\react.svg" alt="The logo of react."/>
-                <figcaption class="icon-grid__caption caption--react">React</figcaption>
+            <div class="icon-grid__container container-react">
+                <img class="icon-grid__icon icon-react" src="images\icons\react.svg" alt="The logo of react."/>
+                <figcaption class="icon-grid__caption caption-react">React</figcaption>
             </div>
             <!-- container for bem icon and caption -->
-            <div class="icon-grid__container icon-grid__container--bem">
-                <img class="icon-grid__icon icon-grid__icon--bem" src="images\icons\bem.svg" alt="The logo of Block element modifier BEM"/>
-                <figcaption class="icon-grid__caption caption--bem">BEM</figcaption>
+            <div class="icon-grid__container container-bem">
+                <img class="icon-grid__icon icon-bem" src="images\icons\bem.svg" alt="The logo of Block element modifier BEM"/>
+                <figcaption class="icon-grid__caption caption-bem">BEM</figcaption>
             </div>
             <!-- container for scss icon and caption -->
-            <div class="icon-grid__container icon-grid__container--scss">
-                <img class="icon-grid__icon icon-grid__icon--scss" src="images\icons\file-type-scss.svg" alt="The logo of Sassy Cascading Style Sheets (SCSS)."/>
-                <figcaption class="icon-grid__caption caption--scss">SCSS</figcaption>
+            <div class="icon-grid__container container-scss">
+                <img class="icon-grid__icon icon-scss" src="images\icons\file-type-scss.svg" alt="The logo of Sassy Cascading Style Sheets (SCSS)."/>
+                <figcaption class="icon-grid__caption caption-scss">SCSS</figcaption>
             </div>
             <!-- container for Javascript icon and caption -->
-            <div class="icon-grid__container icon-grid__container--javascript">
-                <img class="icon-grid__icon icon-grid__icon--javascript" src="images\icons\javascript.svg" alt="The logo of Javascript."/>
-                <figcaption class="icon-grid__caption caption--javascript">Javascript</figcaption>
+            <div class="icon-grid__container container-javascript">
+                <img class="icon-grid__icon icon-javascript" src="images\icons\javascript.svg" alt="The logo of Javascript."/>
+                <figcaption class="icon-grid__caption caption-javascript">Javascript</figcaption>
             </div>
             <!-- container for css3 icon and caption -->
-            <div class="icon-grid__container icon-grid__container--css3">
-                <img class="icon-grid__icon icon-grid__icon--css3" src="images\icons\alternate-css3-logo.svg" alt="The logo of Cascading stylesheet level 3 (CSS3)."/>
-                <figcaption class="icon-grid__caption caption--css3">CSS3</figcaption>
+            <div class="icon-grid__container container-css3">
+                <img class="icon-grid__icon icon-css3" src="images\icons\alternate-css3-logo.svg" alt="The logo of Cascading stylesheet level 3 (CSS3)."/>
+                <figcaption class="icon-grid__caption caption-css3">CSS3</figcaption>
             </div>
             <!-- container html5 react icon and caption -->
-            <div class="icon-grid__container icon-grid__container--html5">
-                <img class="icon-grid__icon icon-grid__icon--html5" src="images\icons\html-5-logo.svg" alt="The logo of HyperText Maruk-up language 5."/>
-                <figcaption class="icon-grid__caption caption--html5">HTML5</figcaption>
+            <div class="icon-grid__container container-html5">
+                <img class="icon-grid__icon icon-html5" src="images\icons\html-5-logo.svg" alt="The logo of HyperText Maruk-up language 5."/>
+                <figcaption class="icon-grid__caption caption-html5">HTML5</figcaption>
             </div>
             <!-- container for Git icon and caption -->
-            <div class="icon-grid__container icon-grid__container--Git">
-                <img class="icon-grid__icon icon-grid__icon--Git" src="images\icons\git.svg" alt="The logo of Git."/>
-                <figcaption class="icon-grid__caption caption--Git">Git</figcaption>
+            <div class="icon-grid__container container-git">
+                <img class="icon-grid__icon icon-git" src="images\icons\git.svg" alt="The logo of Git."/>
+                <figcaption class="icon-grid__caption caption-git">Git</figcaption>
             </div>
         </figure>
     </section>
     <!-- my projects section -->
-    <section class="my-projects" id="my-projects">
-        <h4 class="my-projects__header">My Projects</h4>
+    <section class="card-block" id="my-projects">
+        <h4 class="card-block__header">My Projects</h4>
         <!-- card container for my projects section -->
-        <div class="my-projects__card-container">
+        <div class="card-block__card-container">
             <!-- each card -->
             <!-- card one -->
-            <article class="my-projects__card my-projects__card--one">
-                <img class="card__image card__image--one" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--one">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--one">Project 1</h5>
-                    <p class="card__paragraph card__paragraph--one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratione soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-one">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 1</h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratione soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card two -->
-            <article class="my-projects__card my-projects__card--two">
-                <img class="card__image card__image--two" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--two">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--two">Project 2</h5>
-                    <p class="card__paragraph card__paragraph--two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-two">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 2</h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card three -->
-            <article class="my-projects__card my-projects__card--three">
-                <img class="card__image card__image--three" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--three">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--three">Project 3</h5>
-                    <p class="card__paragraph card__paragraph--three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-three">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 3</h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card four -->
-            <article class="my-projects__card my-projects__card--four show--large-screen">
-                <img class="card__image card__image--four" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--four">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--four">Project 4</h5>
-                    <p class="card__paragraph card__paragraph--four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-four show--large-screen">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 4</h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card five -->
-            <article class="my-projects__card my-projects__card--five show--large-screen">
-                <img class="card__image card__image--five" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--five">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--five">Project 5/h5>
-                    <p class="card__paragraph card__paragraph--five">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-five show--large-screen">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 5/h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card six -->
-            <article class="my-projects__card my-projects__card--six show--large-screen">
-                <img class="card__image card__image--six" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
-                <div class="card__text-content card__text-content--six">
-                    <h6 class="card__sub-heading card">React</h6>
-                    <h5 class="card__heading card__heading--six">Project 6</h5>
-                    <p class="card__paragraph card__paragraph--six">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
-                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
+            <article class="card card-six show--large-screen">
+                <img class="card__image" src="https://place.dog/300/200" alt="A small image of a piece work by George Swift"/>
+                <div class="card__text-content">
+                    <h6 class="card__sub-heading">React</h6>
+                    <h5 class="card__heading">Project 6</h5>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
+                    <button class="card__button button-code" href="https://github.com/GeorgeSwift16">Code<i class="button-code__icon fa-solid fa-code"></i></button>
+                    <button class="card__button button-preview" href="https://github.com/GeorgeSwift16">Preview<i class="button-preview__icon fa-solid fa-code"></i></button>
                 </div>
             </article>
         </div>
@@ -178,15 +181,15 @@
     </main>
     <!-- end of main content -->
     <!-- footer -->
-    <footer class="footer" id="contact-me">
+    <footer class="footer-block" id="contact-me">
         <!-- footer email -->
-        <a class="footer__email" href="mailto:george.swift@nology.io?subject=I saw your portfolio&body=Hi George,">George.swift@nology.io</a>
+        <a class="footer-block__email-link" href="mailto:george.swift@nology.io?subject=I saw your portfolio&body=Hi George,">George.swift@nology.io</a>
         <!-- top banner navigation menu -->
-        <nav class="footer__navigation-menu">
+        <nav class="footer__navigation-menu navigation-menu">
             <!-- footer navigation links -->
-            <a class="footer__link footer__link--cv" href="CV/gswiftCV.docx" download><img class="footer__icon footer__icon--cv" src="./images/icons/job-search-symbol-of-a-hand-holding-cv.png" alt="Icon showing a hand with a resume in it"></a>
-            <a class="footer__link footer__link--github" href="https://github.com/GeorgeSwift16"><img class="footer__icon footer__icon--github" src="/images/icons/github.svg" alt="Icon showing the Github logo"></a>
-            <a class="footer__link footer__link--linkedin" href="www.linkedin.com/in/georgeswift16"><img class="footer__icon footer__icon--linkeddin" src="/images/icons/linkedin-in.svg" alt="Icon showing the Linkedin logo"></a>
+            <a class="footer__link link-cv" href="CV/gswiftCV.docx" download><img class="footer__icon icon-cv" src="./images/icons/job-search-symbol-of-a-hand-holding-cv.png" alt="Icon showing a hand with a resume in it"></a>
+            <a class="footer__link link-github" href="https://github.com/GeorgeSwift16"><img class="footer__icon icon-github" src="/images/icons/github.svg" alt="Icon showing the Github logo"></a>
+            <a class="footer__link link-linkedin" href="www.linkedin.com/in/georgeswift16"><img class="footer__icon icon-linkeddin" src="/images/icons/linkedin-in.svg" alt="Icon showing the Linkedin logo"></a>
         </nav>
     </footer>
 </body>

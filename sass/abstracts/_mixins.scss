@@ -1,0 +1,32 @@
+@use "variables.scss" as *;
+// mixins
+
+// mixins for text styling 
+// headers
+// large header
+@mixin header-large {
+    font-family: $header-font-family;
+    font-weight: $bold-weight;
+    font-size: $large-header-size;
+}
+// standard header
+@mixin header-normal {
+    font-family: $header-font-family;
+    font-weight: $semibold-weight;
+    font-size: $normal-header-size;
+}
+// subheader(card)
+@mixin subheader {
+    @include header-normal;
+    font-size: $subheader-size;
+}
+// 
+@mixin text-normal {
+    font-family: $text-font-family;
+    font-weight: $regular-weight;
+    font-size: $default-font-size;
+}
+@mixin text-smaller {
+    @include text-normal;
+    font-size: $smaller-font-size;
+}

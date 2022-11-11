@@ -1,0 +1,15 @@
+// browser resets 
+
+* { 
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// resetting img properties to prevent overflow
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
