@@ -2,9 +2,9 @@
 @use "../Portfolio-Project/sass/_base/reset";
 @use "../Portfolio-Project/sass/_abstracts/mixins" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Montserrat:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat');
 // class for hidden on mobile but to show on larger screens
 h1 {
     @include header-large;
-    color: blue;
+    
 }
