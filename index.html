@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a62cfe0090.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>George Swift - Student Web Developer</title>
 </head>
 <body>
     <!-- top banner -->
     <!-- top banner container -->
-    <div class="top-banner show--large-screen">
+    <div class="top-banner show--large-screen" id="home">
         <!-- top banner logo(name) -->
         <p class="top-banner__logo">George Swift</p>
         <!-- top banner navigation menu -->
         <nav class="top-banner__navigation-menu">
             <!-- navigation links -->
-            <a class="navigation-menu__link navigation-menu__link--home" href="work">Home</a>
-            <a class="navigation-menu__link navigation-menu__link--about" href="about">About</a>
-            <a class="navigation-menu__link navigation-menu__link--projects" href="contact">Projects</a>
-            <a class="navigation-menu__link navigation-menu__link--Get-in-Touch" href="contact">Get in Touch</a>
+            <a class="navigation-menu__link navigation-menu__link--home" href="#home">Home</a>
+            <a class="navigation-menu__link navigation-menu__link--about" href="#about-me">About</a>
+            <a class="navigation-menu__link navigation-menu__link--projects" href="#my-projects">Projects</a>
+            <a class="navigation-menu__link navigation-menu__link--Get-in-Touch" href="#contact-me">Get in Touch</a>
         </nav>
     </div>
     <!-- Header section -->
@@ -33,7 +34,7 @@
     <!-- main content of the page -->
     <main>
     <!-- The about me section of the page -->
-    <section class="about-me">
+    <section class="about-me" id="about-me">
         <h2 class="about-me__h2">About me</h2>
         <figure class="about-me__figure">
             <img class="about-me__photo" src="https://place.dog/300/200" alt="A photo showing the author, George Swift."/>
@@ -101,7 +102,7 @@
         </figure>
     </section>
     <!-- my projects section -->
-    <section class="my-projects">
+    <section class="my-projects" id="my-projects">
         <h4 class="my-projects__header">My Projects</h4>
         <!-- card container for my projects section -->
         <div class="my-projects__card-container">
@@ -112,8 +113,8 @@
                 <div class="card__text-content card__text-content--one">
                     <h5 class="card__heading card__heading--one">Project 1</h5>
                     <p class="card__paragraph card__paragraph--one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratione soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card two -->
@@ -122,8 +123,8 @@
                 <div class="card__text-content card__text-content--two">
                     <h5 class="card__heading card__heading--two">Project 1</h5>
                     <p class="card__paragraph card__paragraph--two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card three -->
@@ -132,8 +133,8 @@
                 <div class="card__text-content card__text-content--three">
                     <h5 class="card__heading card__heading--three">Project 1</h5>
                     <p class="card__paragraph card__paragraph--three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card four -->
@@ -142,8 +143,8 @@
                 <div class="card__text-content card__text-content--four">
                     <h5 class="card__heading card__heading--four">Project 1</h5>
                     <p class="card__paragraph card__paragraph--four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card five -->
@@ -152,8 +153,8 @@
                 <div class="card__text-content card__text-content--five">
                     <h5 class="card__heading card__heading--five">Project 1</h5>
                     <p class="card__paragraph card__paragraph--five">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
             <!-- card six -->
@@ -162,8 +163,8 @@
                 <div class="card__text-content card__text-content--six">
                     <h5 class="card__heading card__heading--six">Project 1</h5>
                     <p class="card__paragraph card__paragraph--six">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium nostrum nobis sint sunt ipsa delectus quae officiis? Quam,magnam tempora! Fugiat perspiciatis debitis vel, ratitwo soluta recusandae quos deserunt.</p>
-                    <button class="card__button card__button--code">Code</button>
-                    <button class="card__button card__button--preview">Preview</button>
+                    <button class="card__button card__button--code">Code<i class="fa-solid fa-code"></i></button>
+                    <button class="card__button card__button--preview">Preview<i class="fa-solid fa-code"></i></button>
                 </div>
             </article>
         </div>
@@ -171,8 +172,16 @@
     </main>
     <!-- end of main content -->
     <!-- footer -->
-    <footer>
-        
+    <footer class="footer" id="contact-me">
+        <!-- footer email -->
+        <a class="footer__email" href="mailto:george.swift@nology.io?subject=I saw your portfolio&body=Hi George,">George.swift@nology.io</a>
+        <!-- top banner navigation menu -->
+        <nav class="footer__navigation-menu">
+            <!-- footer navigation links -->
+            <a class="footer__link footer__link--cv" href="gswiftCV.docx"><img class="footer__icon footer__icon--cv" src="./images/icons/job-search-symbol-of-a-hand-holding-cv.png" alt="Icon showing a hand with a resume in it"></a>
+            <a class="footer__link footer__link--github" href="https://github.com/GeorgeSwift16"><img class="footer__icon footer__icon--github" src="/images/icons/github.svg" alt="Icon showing the Github logo"></a>
+            <a class="footer__link footer__link--linkedin" href="www.linkedin.com/in/georgeswift16"><img class="footer__icon footer__icon--linkeddin" src="/images/icons/linkedin-in.svg" alt="Icon showing the Linkedin logo"></a>
+        </nav>
     </footer>
 </body>
 </html>
