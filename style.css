@@ -13,4 +13,11 @@
 
 .show--large-screen {
   display: none;
+}
+
+h1 {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 4rem;
+  color: blue;
 }/*# sourceMappingURL=style.css.map */

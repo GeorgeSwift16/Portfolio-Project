@@ -1,7 +1,10 @@
-@use "sass/abstracts/_variables.scss" as *;
-@use "sass/abstracts/mixins.scss";
-@use "sass/base/reset.scss";
+@use "../Portfolio-Project/sass/_abstracts/variables" as *;
+@use "../Portfolio-Project/sass/_base/reset";
+@use "../Portfolio-Project/sass/_abstracts/mixins" as *;
 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Montserrat:wght@200;400;600;700&display=swap');
 // class for hidden on mobile but to show on larger screens
+h1 {
+    @include header-large;
+    color: blue;
+}
