@@ -1,15 +1,15 @@
 // browser resets 
 
 * { 
-    border: 1px solid red;
+    border: 1px solid blue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     // image reset to prevent overflow 
     img {
-        max-width: 100%;
-        height: auto;
-        display: block;
+        width: 100px;
+        height: 60px;
+        display: inline-block;
     }
 }
 // hiding elements only to be displayed on larger screen sizes.

@@ -2,9 +2,157 @@
 @use "../Portfolio-Project/sass/_base/reset";
 @use "../Portfolio-Project/sass/_abstracts/mixins" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat');
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap");
+
+
 // class for hidden on mobile but to show on larger screens
-h1 {
-    @include header-large;
-    
+// creat sass maps for font styles / size and colours
+// create mixins with arguments to use for coloured borders and hover effects
+
+//          TEXT styling
+
+// body text styling - setting all text to default text size for dryer code
+body {
+    @include text-normal;
 }
+
+    // header text styling
+
+    .header {
+        &__greeting-text {
+            @include subheader;      
+        }
+        &__greeting-highlight {
+            color: $tertiary-color;
+
+        }
+        &__heading {
+            @include header-large;
+        }
+        &__text-highlight {
+            color: $tertiary-color;
+        }
+    }
+
+    // about me section text styling
+
+    .about-me {
+        &__header {
+            @include header-normal;
+        }
+        
+
+    }
+    // technical-skills text styling
+
+    .technical-skills {
+        &__header {
+            @include header-normal;
+        }
+    }
+
+        // icon grid section text styling
+        .icon-grid {
+            &__caption {
+                @include text-smaller;
+            }
+        }
+
+    // My projects section text styling
+    // section level styling
+    .card-block {
+        &__header {
+            @include header-normal;
+        }
+    }
+        // Card text styling
+        .card {
+            &__sub-heading {
+                @include text-normal;
+                font-weight: calc($regular-weight * 1.2);
+            }
+            &__heading {
+                @include header-normal;
+            }
+            &__button {
+                @include text-smaller;
+            }
+        }
+
+    // footer text styling
+    .footer {
+        &__email-link {
+            color: $tertiary-color;
+        }
+        &__link {
+            color: $secondary-color;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+// layout 
+body {
+    background-color: $primary-color;
+    color: $secondary-color;  
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;   
+    align-items: center;
+    justify-content: space-between;
+    // remove padding on media query - placeholder for nav
+}
+    .show--large-screen {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space;
+        align-items: center;
+        padding: 3vh 3vh 3vh 3vh;
+
+        &__text-container {
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            .header__greeting-text {
+                width: 80%;
+                .header__text-highlight {
+                    width: 100%
+                }
+
+            
+            }
+            .header__heading {
+                width: 80%;
+                .header__text-highlight {
+                    max-width: 100%
+            }
+        }
+            
+    }    
+            
+        
+    .main-content-block {
+        width: 100%;
+        height: 200vh;
+    }
+    .footer-block {
+        width: 100%;
+        height: 20vh;
+    }
+    }
+
