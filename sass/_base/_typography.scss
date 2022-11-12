@@ -1,0 +1,85 @@
+@use "../_abstracts/variables" as *;
+@use "../_abstracts/mixins" as *;
+
+//          TEXT styling
+
+// body text styling - setting all text to default text size for dryer code
+body {
+    @include text-normal;
+}
+
+    // header text styling
+
+    .header {
+        &__greeting-text {
+            @include subheader;      
+        }
+        &__greeting-highlight {
+            color: $tertiary-color;
+
+        }
+        &__heading {
+            @include header-large;
+        }
+        &__text-highlight {
+            color: $tertiary-color;
+        }
+    }
+
+    // about me section text styling
+
+    .about-me {
+    color: $primary-color;
+        &__header {
+            @include header-normal;
+            text-align: center;
+        }
+
+    }
+    // technical-skills text styling
+
+    .technical-skills {
+        color: $secondary-color;
+        text-align: center;
+        &__header {
+            @include header-normal;
+        }
+    }
+
+        // icon grid section text styling
+        .icon-grid {
+            &__caption {
+                @include text-smaller;
+            }
+        }
+
+    // My projects section text styling
+    // section level styling
+    .card-block {
+        &__header {
+            @include header-normal;
+        }
+    }
+        // Card text styling
+        .card {
+            &__sub-heading {
+                @include text-normal;
+                font-weight: calc($regular-weight * 1.2);
+            }
+            &__heading {
+                @include header-normal;
+            }
+            &__button {
+                @include text-smaller;
+            }
+        }
+
+    // footer text styling
+    .footer {
+        &__email-link {
+            color: $tertiary-color;
+        }
+        &__link {
+            color: $secondary-color;
+        }
+    }

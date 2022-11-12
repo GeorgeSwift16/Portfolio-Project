@@ -5,13 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // image reset to prevent overflow 
-    img {
-        width: 100px;
-        height: 60px;
-        display: inline-block;
-    }
+    // image reset to prevent overflow     
 }
+
 // hiding elements only to be displayed on larger screen sizes.
 .show--large-screen {
     display: none;
