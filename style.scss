@@ -12,63 +12,65 @@
 // adjust header layour so sizing is on the text boxes not on the actual container
 
 // layout 
+
 body {
     background-color: $primary-color;
-    color: $secondary-color;  
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;   
-    align-items: center;
-    justify-content: space-between;
+    color: $secondary-color;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100vw;   
+    grid-template-rows: minmax(300px, 3fr) auto minmax(150px, 20vh);
+    gap: 0.2rem 0;
 
 }
     .show--large-screen {
         display: none;
     }
     .header {
-        width: 100%;
-        height: 70vh;
+        grid-row: 1 / 2;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
         align-items: center;
-        padding: 3vh 3vh 3vh 3vh;
+        justify-content: center;
+        padding: 1rem;
 
         &__text-container {
-            height: 100%;
+            height: 70vh;
             display: flex;
             flex-flow: column nowrap;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
-            .header__greeting-text {
+        }
+            &__greeting-text {
+                display: block;
                 width: 80%;
-                .header__text-highlight {
-                    width: 100%
-                }
-
-            
             }
-            .header__heading {
+                &__text-highlight {
+                        width: 100%
+                }
+            &__heading {
                 width: 80%;
-                .header__text-highlight {
-                    max-width: 100%
-                }
             }
+                
             
-        }    
+            
+            
     }        
     // main content layout
     .main-content-block {
-        width: 100%;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-evenly;
+        height: auto;
+        grid-row: 2 / 3;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
         background-color: $secondary-color;
+        
     }
         // about me section layout
         .about-me {
-            height: 100vh;
+            height: 100%;
+            grid-row: 1 / 2;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -81,7 +83,7 @@ body {
 
             }
             &__figure {
-                height: 30vh;
+                height: 40%;
                 width: 60%;
             }
                 &__photo {
@@ -90,7 +92,7 @@ body {
                     height: 100%;
                 }
             &__text-content {
-                height: 40vh;
+                height: 40%;
                 width: 90%;
                 display: flex;
                 flex-flow: column nowrap;
@@ -99,9 +101,10 @@ body {
             }
         }
         .technical-skills {
+            height: 100%;
+            grid-row: 2 / 3;
             background-color: $tertiary-color;
-            height: 100vh;
-            width: 100%;
+            width: auto;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-evenly;
@@ -114,12 +117,11 @@ body {
             }
         }
             .icon-grid {
-                height: 60vh;
                 width: 80%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
-                gap: 10px;
+                gap: 5px;
                 background-color: $secondary-color;
                 &__container{
                     display: flex;
@@ -138,10 +140,98 @@ body {
                         background-color: $tertiary-color;
                     }
             }
+        .card-block {
+            background-color: $secondary-color;
+            width: auto;
+            grid-row: 3 / 4;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 30fr;
+            &__header {
+                grid-row: 1 / 2;
+                text-align: center;
+            }
+            &__cards-container {
+                width: auto;
+                background-color: $secondary-color;
+                grid-row: 2 / 3;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: 1fr 1fr 1fr;
+  
+            }
+        }
+            .card {
+                    width: auto;
+                    background-color: $primary-color;
+                    display: flex;
+                    flex-direction: column;
+                    justify-items: space-around;
+                    align-items: center;
+                    &__image-container {
+                    width: auto;
+                    }
+                    &__image {
+                    display: block;
+                    width: auto;
+                    height: 30vh;                 
+                }
+            
+            &-one {
+                background-color: $primary-color;
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+
+            }
+            &-two {
+                background-color: $tertiary-color;
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+            &-three {
+                background-color: $secondary-color;
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+            &-four {
+                display: none;
+            }
+            &-five {
+                display: none;
+            }
+            &-six {
+                display: none;
+            }
+        }
 
 
-    .footer-block {
-    width: 100%;
-    height: 20vh;
+    .footer {
+    grid-row: 3 / 4;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+        &__email-link {
+        display: block;
+        width: 20rem;
+        text-align: center;
+        }
+        &__navigation-menu {
+            width: 20rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .footer__link {
+                display: block;
+                width: 3rem;
+                .footer__icon {
+                    display: inline-block;
+                    width: 3rem;
+                    height:100%;
+                }
+            }
+        }
+    
     }
     

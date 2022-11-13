@@ -20,6 +20,7 @@ body {
         }
         &__heading {
             @include header-large;
+        
         }
         &__text-highlight {
             color: $tertiary-color;
@@ -58,6 +59,7 @@ body {
     .card-block {
         &__header {
             @include header-normal;
+            color: $primary-color;
         }
     }
         // Card text styling
@@ -71,6 +73,24 @@ body {
             }
             &__button {
                 @include text-smaller;
+            }
+            &-one{
+                color: $tertiary-color;
+            }
+            &-two {
+                color: $primary-color;
+            }
+            &-three {
+                color: $tertiary-color;
+            }
+            &-four {
+                color: $primary-color;
+            }
+            &-five {
+                color: $primary-color;
+            }
+            &-six {
+                color: $primary-color;
             }
         }
 
