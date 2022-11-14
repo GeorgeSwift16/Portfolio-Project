@@ -16,11 +16,9 @@
 body {
     background-color: $primary-color;
     color: $secondary-color;
-    width: 100vw;
     display: grid;
-    grid-template-columns: 100vw;   
-    grid-template-rows: minmax(300px, 3fr) auto minmax(150px, 20vh);
-    gap: 0.2rem 0;
+    grid-template-columns: auto;  
+    grid-template-rows: minmax(300px, auto) auto minmax(150px, 20vh);
 
 }
     .show--large-screen {
@@ -35,19 +33,18 @@ body {
         padding: 1rem;
 
         &__text-container {
-            height: 70vh;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-evenly;
             align-items: center;
+            padding: 1rem;
+            flex: 1;
         }
             &__greeting-text {
                 display: block;
                 width: 80%;
+                margin-bottom: 1rem;
             }
-                &__text-highlight {
-                        width: 100%
-                }
             &__heading {
                 width: 80%;
             }
@@ -58,25 +55,22 @@ body {
     }        
     // main content layout
     .main-content-block {
-        height: auto;
         grid-row: 2 / 3;
-        width: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-rows: minmax(1fr,100vh) minmax(1fr,100vh) 2fr;
         background-color: $secondary-color;
         
     }
         // about me section layout
         .about-me {
-            height: 100%;
             grid-row: 1 / 2;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: space-evenly;
-            padding-left: 2%;
-            padding-right: 2%;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
             background-color: $secondary-color;
             &__header {
                 width: 50%;
@@ -92,8 +86,7 @@ body {
                     height: 100%;
                 }
             &__text-content {
-                height: 40%;
-                width: 90%;
+                width: 70%;
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-between;
@@ -101,28 +94,29 @@ body {
             }
         }
         .technical-skills {
-            height: 100%;
             grid-row: 2 / 3;
             background-color: $tertiary-color;
-            width: auto;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-evenly;
             align-items: center;
+            padding: 1rem;
             &__header {
                 width: 80%;
+                text-align: center;
             }
             &__paragraph {
                 width: 70%;
+
+                text-align: center;
             }
         }
             .icon-grid {
-                width: 80%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
-                gap: 5px;
-                background-color: $secondary-color;
+                gap: 0.2rem;
+                background-color: $primary-color;
                 &__container{
                     display: flex;
                     flex-flow: column nowrap;
@@ -142,39 +136,34 @@ body {
             }
         .card-block {
             background-color: $secondary-color;
-            width: auto;
             grid-row: 3 / 4;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 30fr;
+            grid-template-rows: minmax(1fr, 10vh) 3fr;
             &__header {
                 grid-row: 1 / 2;
                 text-align: center;
+                padding: 1rem;
             }
             &__cards-container {
-                width: auto;
                 background-color: $secondary-color;
                 grid-row: 2 / 3;
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-areas: 1fr 1fr 1fr;
-  
+
             }
         }
             .card {
-                    width: auto;
                     background-color: $primary-color;
                     display: flex;
                     flex-direction: column;
-                    justify-items: space-around;
+                    justify-items: space-evenly;
                     align-items: center;
-                    &__image-container {
-                    width: auto;
-                    }
+                    padding: 1rem;
                     &__image {
                     display: block;
-                    width: auto;
-                    height: 30vh;                 
+                    height: 10rem;                 
                 }
             
             &-one {
@@ -214,11 +203,10 @@ body {
     align-items: center;
         &__email-link {
         display: block;
-        width: 20rem;
         text-align: center;
         }
         &__navigation-menu {
-            width: 20rem;
+            width: 80%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
