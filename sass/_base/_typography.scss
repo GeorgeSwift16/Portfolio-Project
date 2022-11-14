@@ -35,7 +35,10 @@ body {
             @include header-normal;
             text-align: center;
         }
-
+        &__paragraph-one, &__paragraph-two {
+            @include text-normal;
+        }
+        
     }
     // technical-skills text styling
 

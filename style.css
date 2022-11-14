@@ -42,6 +42,11 @@ body {
   font-size: 2rem;
   text-align: center;
 }
+.about-me__paragraph-one, .about-me__paragraph-two {
+  font-family: "Montserrat", Verdana;
+  font-weight: 300;
+  font-size: 1rem;
+}
 
 .technical-skills {
   color: #ffffff;
@@ -114,8 +119,8 @@ body {
   background-color: #1e1e1e;
   color: #ffffff;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: minmax(300px, auto) auto minmax(150px, 20vh);
+  width: 100vw;
+  grid-template-columns: 100vw;
 }
 
 .show--large-screen {
@@ -126,7 +131,6 @@ body {
   grid-row: 1/2;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
   padding: 1rem;
 }
@@ -136,7 +140,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
-  flex: 1;
 }
 .header__greeting-text {
   display: block;
@@ -151,7 +154,6 @@ body {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(1fr, 100vh) minmax(1fr, 100vh) 2fr;
   background-color: #ffffff;
 }
 
@@ -159,18 +161,23 @@ body {
   grid-row: 1/2;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-evenly;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
   background-color: #ffffff;
 }
 .about-me__header {
-  width: 50%;
+  padding: 0.5rem;
 }
 .about-me__figure {
-  height: 40%;
-  width: 60%;
+  width: 75%;
+  align-self: center;
+  display: flex;
+  align-items: stretch;
+  justify-items: stretch;
+  padding: 2rem;
+  flex-grow: 0.5;
+  flex-shrink: 1;
 }
 .about-me__photo {
   display: block;
@@ -178,11 +185,18 @@ body {
   height: 100%;
 }
 .about-me__text-content {
-  width: 70%;
+  padding: 1rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+.about-me__paragraph-one {
+  padding: 0.5rem;
+}
+.about-me__paragraph-two {
+  flex-grow: 1;
+  padding: 0.5rem;
 }
 
 .technical-skills {
@@ -219,8 +233,6 @@ body {
   display: block;
   width: 100%;
   height: 75%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .icon-grid__caption {
   height: 25%;
@@ -232,7 +244,6 @@ body {
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(1fr, 10vh) 3fr;
 }
 .card-block__header {
   grid-row: 1/2;
