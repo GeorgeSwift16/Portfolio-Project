@@ -119,12 +119,7 @@ body {
   background-color: #1e1e1e;
   color: #ffffff;
   display: grid;
-  width: 100vw;
   grid-template-columns: 100vw;
-}
-
-.show--large-screen {
-  display: none;
 }
 
 .header {
@@ -161,7 +156,7 @@ body {
   grid-row: 1/2;
   display: flex;
   flex-flow: column nowrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-evenly;
   padding: 0.5rem;
   background-color: #ffffff;
@@ -173,11 +168,8 @@ body {
   width: 75%;
   align-self: center;
   display: flex;
-  align-items: stretch;
-  justify-items: stretch;
   padding: 2rem;
-  flex-grow: 0.5;
-  flex-shrink: 1;
+  max-width: 30rem;
 }
 .about-me__photo {
   display: block;
@@ -185,58 +177,58 @@ body {
   height: 100%;
 }
 .about-me__text-content {
+  max-width: 30rem;
   padding: 1rem;
   display: flex;
   flex-flow: column nowrap;
-  flex-grow: 1;
-  flex-shrink: 2;
+  align-items: center;
+  justify-content: center;
 }
 .about-me__paragraph-one {
   padding: 0.5rem;
 }
 .about-me__paragraph-two {
-  flex-grow: 1;
   padding: 0.5rem;
 }
 
 .technical-skills {
   grid-row: 2/3;
   background-color: #f06423;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 1rem;
 }
 .technical-skills__header {
-  width: 80%;
   text-align: center;
+  padding: 1rem;
 }
 .technical-skills__paragraph {
-  width: 70%;
   text-align: center;
+  padding: 1rem;
 }
 
 .icon-grid {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   gap: 0.2rem;
-  background-color: #1e1e1e;
+  padding: 0.4rem;
+  background-color: #ffffff;
 }
 .icon-grid__container {
-  display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
+  max-height: 10rem;
+  border: 3px solid black;
 }
 .icon-grid__icon {
   display: block;
   width: 100%;
-  height: 75%;
+  height: 70%;
+  background-color: #f06423;
 }
 .icon-grid__caption {
-  height: 25%;
   background-color: #f06423;
+  height: 30%;
+  padding: 0.5rem;
+  background-color: #1e1e1e;
 }
 
 .card-block {
@@ -262,13 +254,19 @@ body {
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  justify-items: space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
 }
+.card__image-container {
+  width: 80%;
+  padding: 1rem;
+}
 .card__image {
-  display: block;
-  height: 10rem;
+  width: 100%;
+}
+.card__text-content {
+  padding: 1rem;
 }
 .card-one {
   background-color: #1e1e1e;
@@ -300,25 +298,23 @@ body {
   width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .footer__email-link {
+  padding: 1rem;
   display: block;
   text-align: center;
 }
 .footer__navigation-menu {
-  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .footer__navigation-menu .footer__link {
+  padding: 1rem;
   display: block;
-  width: 3rem;
 }
 .footer__navigation-menu .footer__link .footer__icon {
-  display: inline-block;
-  width: 3rem;
-  height: 100%;
+  width: 2rem;
 }/*# sourceMappingURL=style.css.map */
