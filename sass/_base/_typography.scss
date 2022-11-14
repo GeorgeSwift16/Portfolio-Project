@@ -7,6 +7,16 @@
 body {
     @include text-normal;
 }
+    .top-banner {
+
+        .top-banner__logo {
+            @include header-normal;
+        }
+        .top-banner__navigation-menu{
+            @include subheader;
+        }
+
+    }
 
     // header text styling
 

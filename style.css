@@ -15,6 +15,18 @@ body {
   font-size: 1rem;
 }
 
+.top-banner .top-banner__logo {
+  font-family: "Manrope", sans-serif;
+  font-weight: 850;
+  font-size: 2rem;
+}
+.top-banner .top-banner__navigation-menu {
+  font-family: "Manrope", sans-serif;
+  font-weight: 850;
+  font-size: 2rem;
+  font-size: 1.6rem;
+}
+
 .header__greeting-text {
   font-family: "Manrope", sans-serif;
   font-weight: 850;
@@ -317,4 +329,26 @@ body {
 }
 .footer__navigation-menu .footer__link .footer__icon {
   width: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .show--large-screen {
+    display: unset;
+  }
+  .top-banner {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .header {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-content-block {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .footer {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
 }/*# sourceMappingURL=style.css.map */

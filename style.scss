@@ -11,7 +11,7 @@
 // create mixins with arguments to use for coloured borders and hover effects
 // adjust header layour so sizing is on the text boxes not on the actual container
 
-// layout 
+// layouts
 
 body {
     background-color: $primary-color;
@@ -19,6 +19,8 @@ body {
     display: grid;
     grid-template-columns: 100vw;  
 }
+    // top banner layout
+    
     .header {
         grid-row: 1 / 2;
         display: flex;
@@ -239,3 +241,26 @@ body {
     
     }
     
+
+
+@media screen and (min-width:1024px) {
+.show--large-screen {
+    display: unset;
+}
+.top-banner {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.header {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.main-content-block {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.footer{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+}   
