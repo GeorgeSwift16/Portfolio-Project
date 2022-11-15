@@ -1,7 +1,7 @@
 @use "../_abstracts/variables" as *;
 @use "../_abstracts/mixins" as *;
 
-//          TEXT styling
+//          styling
 
 // body text styling - setting all text to default text size for dryer code
 body {
@@ -11,11 +11,21 @@ body {
 
         .top-banner__logo {
             @include header-normal;
+            color: $tertiary-color;
         }
         .top-banner__navigation-menu{
             @include subheader;
+            color: $tertiary-color
+            
         }
-
+        .navigation-menu__link{
+            color: $tertiary-color;
+            &:hover {
+                color: $secondary-color;
+                background-color: $tertiary-color;
+                border: 1px solid $secondary-color;
+            }
+        }
     }
 
     // header text styling
@@ -94,7 +104,7 @@ body {
                 color: $primary-color;
             }
             &-three {
-                color: $tertiary-color;
+                color: $secondary-color;
             }
             &-four {
                 color: $primary-color;
@@ -111,6 +121,19 @@ body {
     .footer {
         &__email-link {
             color: $tertiary-color;
+            &:hover{
+                color: $secondary-color;
+                text-shadow: 2rem;
+                &::first-letter {
+                    font-size: 1.3rem;
+                    color: $tertiary-color;
+                }
+                &::after {
+                    content: " <--60% of the time he overcomplicates it every time";
+                    color: $tertiary-color;
+                    font-size: 1.5rem;
+                }
+            }
         }
         &__link {
             color: $secondary-color;

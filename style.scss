@@ -17,10 +17,9 @@ body {
     background-color: $primary-color;
     color: $secondary-color;
     display: grid;
-    grid-template-columns: 100vw;  
+    grid-template-columns: 100%;  
 }
-    // top banner layout
-    
+
     .header {
         grid-row: 1 / 2;
         display: flex;
@@ -128,10 +127,10 @@ body {
                         display: block;
                         width: 100%;
                         height: 70%;
-                        background-color: $tertiary-color;
+                        background-color: $secondary-color;
                     }
                     &__caption {
-                        background-color: $tertiary-color;
+                        color: $tertiary-color;
                         height: 30%;
                         padding: 0.5rem;
                         background-color: $primary-color;
@@ -178,30 +177,31 @@ body {
                 &__text-content {
                     padding: 1rem;
                 }
-                    &__sub-heading {
-                    
-                    }
-                    &__heading {
-                    
-                    }
-                    &__paragraph {
-                    
-                    }                     
+                
                 // individual card positioning
                 &-one {
                     background-color: $primary-color;
                     grid-column: 1 / 2;
                     grid-row: 1 / 2;
+                    .card__image-container {
+                        background-color: $tertiary-color;
+                    }
                 }
                 &-two {
-                    background-color: $tertiary-color;
-                    grid-column: 1 / 2;
-                    grid-row: 2 / 3;
-                }
-                &-three {
                     background-color: $secondary-color;
                     grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                    .card__image-container {
+                        background-color: $tertiary-color;
+                    }
+                }
+                &-three {
+                    background-color: $tertiary-color;                   
+                    grid-column: 1 / 2;
                     grid-row: 3 / 4;
+                    .card__image-container {   
+                        background-color: $primary-color;
+                    }
                 }
                 &-four {
                     display: none;
@@ -250,17 +250,202 @@ body {
 .top-banner {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 25% 20% 30% 25%;
+    justify-items: center;
+    padding: 0.5rem;
+        .top-banner__logo-container{
+            grid-column: 1 / 3;
+            
+        }
+    .top-banner__navigation-menu {
+        grid-column: 3 / 5;
+
+        .navigation-menu__link {
+            padding: 1rem;
+        }
+    }
 }
 .header {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: repeat (4, 1fr);
+    .header__text-container {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+    .header__image {
+        display: block;
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        width: 100%;
+    }
 }
 .main-content-block {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    .about-me {
+        padding: 2rem;
+        display: grid;
+        justify-content: stretch;
+        align-items: stretch;
+        .about-me__header {
+            text-align: left;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            align-self: flex-end;
+        }
+        .about-me__figure {
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+            justify-self: center;
+        }
+        .about-me__text-content {
+            width: 100%;
+            padding: unset;
+            text-align: left;
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+            align-self: flex-start;
+        }
+    }
+    .technical-skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .technical-skills__header {
+            color: $primary-color;
+        }  
+        .icon-grid {
+            padding: 2rem;
+            border: 2px solid $secondary-color;
+            border-radius: 15%;
+            background-color: $primary-color;
+            display: inline-grid;
+            grid-template-rows: 1fr;
+                .icon-grid__container {
+                    width: 7rem;
+                    grid-row: 1 / 2;
+                    background-color: $secondary-color;
+                    .icon-grid__icon {
+                        width: 100%;
+                        background-color: $secondary-color;
+                    
+                    }
+                    .icon-grid__caption{
+                        background-color: $tertiary-color;
+                        color: $secondary-color;
+                    }
+                }
+                
+            }
+        }
+    .card-block {
+        margin-top: 1%;
+        .card-block__cards-container {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            .card {
+                background-color: $secondary-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 2rem;
+                .card__image-container {
+                    background-color: $tertiary-color;
+                    width: 80%;
+                    padding: 1rem;
+                    .card-image {
+                        width: 100%;
+                    }
+                }
+                .card__text-content {
+                    padding: 1rem;
+                    .card__sub-heading {
+                        text-decoration: solid underline $tertiary-color 3px;
+                    }
+                }
+            } 
+            .card-one {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                border: 2px solid $tertiary-color;
+                background-color: $primary-color;
+            }
+            .card-two {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                border: 2px solid $primary-color;
+            }
+            .card-three {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+                border: 2px solid $tertiary-color;
+                background-color: $primary-color;
+            }
+            .card-four {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                border: 2px solid $tertiary-color;
+            }
+            .card-five {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                border: 2px solid $tertiary-color;
+                background-color: $primary-color;
+                color: $tertiary-color;
+            }
+            .card-six {
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+                border: 2px solid $tertiary-color;
+            }
+        }
+    }
 }
 .footer{
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    display: grid;
+    
+    padding: 2rem;
+        .footer__email-link {
+            grid-column: 1 / 2;
+            padding: 1rem;
+        }
+        .footer__navigation-menu {
+            grid-column:  3 / 4;
+            width: 20vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .footer__link {
+                padding: 0.2rem;
+                .footer__icon {
+                border-radius: 40%;
+                width: 4rem;
+                height: 4rem;
+                background-color: $tertiary-color;
+                color: $secondary-color;
+                padding: 0;
+                }
+            }
+        }
+    }
+
 }
-}   
+
+@media screen and (min-width: 1440px) {
+* {
+    font-size: 30px;
+}
+.header__greeting-text, .header__text-highlight {
+    @include header-large;
+}
+}
