@@ -23,7 +23,6 @@ body {
             &:hover {
                 color: $secondary-color;
                 background-color: $tertiary-color;
-                border: 1px solid $secondary-color;
             }
         }
     }
@@ -50,8 +49,6 @@ body {
     // about me section text styling
 
     .about-me {
-        box-shadow: 4px 4px 4px 4px $primary-color;
-        border-radius: 14px;
         color: $primary-color;
         &__header {
             text-decoration: underline 0.2rem $tertiary-color;
@@ -66,8 +63,6 @@ body {
     // technical-skills text styling
 
     .technical-skills {
-        box-shadow: 2px 2px 2px 2px $secondary-color;
-        border-radius: 10px;
         color: $secondary-color;
         text-align: center;
         &__header {
@@ -92,8 +87,6 @@ body {
     }
         // Card text styling
         .card {
-            box-shadow: 5px 5px 5px 5px $tertiary-color;
-            border-radius: 10px;
             opacity: 0.85;
             transition: opacity 0.5s ease;
             &__sub-heading {
@@ -140,7 +133,7 @@ body {
                 &::after {
                     content: " <--60% of the time he overcomplicates it every time";
                     color: $tertiary-color;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
             }
         }

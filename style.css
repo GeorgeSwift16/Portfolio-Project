@@ -34,7 +34,6 @@ body {
 .top-banner .navigation-menu__link:hover {
   color: #ffffff;
   background-color: #f06423;
-  border: 1px solid #ffffff;
 }
 
 .header__greeting-text {
@@ -56,8 +55,6 @@ body {
 }
 
 .about-me {
-  box-shadow: 4px 4px 4px 4px #1e1e1e;
-  border-radius: 14px;
   color: #1e1e1e;
 }
 .about-me__header {
@@ -75,8 +72,6 @@ body {
 }
 
 .technical-skills {
-  box-shadow: 2px 2px 2px 2px #ffffff;
-  border-radius: 10px;
   color: #ffffff;
   text-align: center;
 }
@@ -101,8 +96,6 @@ body {
 }
 
 .card {
-  box-shadow: 5px 5px 5px 5px #f06423;
-  border-radius: 10px;
   opacity: 0.85;
   transition: opacity 0.5s ease;
 }
@@ -156,7 +149,7 @@ body {
 .footer__email-link:hover::after {
   content: " <--60% of the time he overcomplicates it every time";
   color: #f06423;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .footer__link {
   color: #ffffff;
@@ -255,13 +248,13 @@ body {
 
 .icon-grid {
   display: inline-grid;
-  border-radius: 14px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.2rem;
   padding: 0.4rem;
   background-color: #ffffff;
 }
 .icon-grid__container {
+  border-radius: 8px;
   flex-flow: column wrap;
   justify-content: space-between;
   max-height: 10rem;
@@ -367,16 +360,21 @@ body {
   text-align: center;
 }
 .footer__navigation-menu {
+  width: 10rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
 }
 .footer__navigation-menu .footer__link {
-  padding: 1rem;
+  background-color: #f06423;
+  border-radius: 5px;
+  padding: 0.05rem;
   display: block;
 }
 .footer__navigation-menu .footer__link .footer__icon {
   width: 2rem;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 1024px) {
@@ -458,7 +456,6 @@ body {
   .main-content-block .technical-skills .icon-grid {
     padding: 2rem;
     border: 2px solid #ffffff;
-    border-radius: 15%;
     background-color: #1e1e1e;
     display: inline-grid;
     grid-template-rows: 1fr;
@@ -486,6 +483,7 @@ body {
     grid-template-rows: 1fr 1fr;
   }
   .main-content-block .card-block .card-block__cards-container .card {
+    border-radius: 10px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -494,6 +492,7 @@ body {
     padding: 2rem;
   }
   .main-content-block .card-block .card-block__cards-container .card .card__image-container {
+    border-radius: 8px;
     background-color: #f06423;
     width: 80%;
     padding: 1rem;
@@ -574,6 +573,9 @@ body {
 @media screen and (min-width: 1440px) {
   * {
     font-size: 20px;
+  }
+  .navigation-menu__link {
+    font-size: 1.7rem;
   }
   .header__greeting-text, .header__text-highlight {
     font-family: "Manrope", sans-serif;
