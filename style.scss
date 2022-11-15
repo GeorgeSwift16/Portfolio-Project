@@ -75,6 +75,7 @@ body {
                 max-width: 30rem;
             }
                 &__photo {
+                    border-radius: 8px;
                     display: block;
                     width: 100%;
                     height: 100%;
@@ -112,6 +113,7 @@ body {
             // technical skills icon grid layout
             .icon-grid {
                 display: inline-grid;
+                border-radius: 14px;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 0.2rem;
                 padding: 0.4rem;
@@ -126,13 +128,15 @@ body {
                     &__icon {
                         display: block;
                         width: 100%;
-                        height: 70%;
+                        height: 65%;
                         background-color: $secondary-color;
                     }
                     &__caption {
+                        border-radius: 3px;
+                        border: 1px solid black;
                         color: $tertiary-color;
-                        height: 30%;
-                        padding: 0.5rem;
+                        height: 35%;
+                        padding-top: 1rem;
                         background-color: $primary-color;
                     }
             }
@@ -443,9 +447,14 @@ body {
 
 @media screen and (min-width: 1440px) {
 * {
-    font-size: 25px;
+    font-size: 20px;
+    }
+    .header__greeting-text, .header__text-highlight {
+        @include header-large;
+    }
 }
-.header__greeting-text, .header__text-highlight {
-    @include header-large;
-}
+@media screen and (min-width: 1700px) {
+    * {
+        font-size: 25px;
+    }
 }
