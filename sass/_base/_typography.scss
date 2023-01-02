@@ -5,139 +5,135 @@
 
 // body text styling - setting all text to default text size for dryer code
 body {
-    @include text-normal;
+  @include text-normal;
 }
-    .top-banner {
-
-        .top-banner__logo {
-            @include header-normal;
-            color: $tertiary-color;
-        }
-        .top-banner__navigation-menu{
-            @include subheader;
-            color: $tertiary-color
-            
-        }
-        .navigation-menu__link{
-            color: $tertiary-color;
-            &:hover {
-                color: $secondary-color;
-                background-color: $tertiary-color;
-            }
-        }
+.top-banner {
+  .top-banner__logo {
+    @include header-normal;
+    color: $tertiary-color;
+  }
+  .top-banner__navigation-menu {
+    @include subheader;
+    color: $tertiary-color;
+  }
+  .navigation-menu__link {
+    color: $tertiary-color;
+    &:hover {
+      border-radius: 20px;
+      color: $secondary-color;
+      background-color: $tertiary-color;
     }
-
-    // header text styling
-
-    .header {
-        &__greeting-text {
-            @include subheader;      
-        }
-        &__greeting-highlight {
-            color: $tertiary-color;
-
-        }
-        &__heading {
-            @include header-large;
-        
-        }
-        &__text-highlight {
-            color: $tertiary-color;
-        }
+    &:active {
+      color: black;
+      box-shadow: inset 0px 0px 0px 17px rgba(255, 255, 255, 0.95);
+      text-decoration: underline 3px $secondary-color;
     }
+  }
+}
 
-    // about me section text styling
+// header text styling
 
-    .about-me {
-        color: $primary-color;
-        &__header {
-            text-decoration: underline 0.2rem $tertiary-color;
-            @include header-normal;
-            text-align: center;
-        }
-        &__paragraph-one, &__paragraph-two {
-            @include text-normal;
-        }
-        
+.header {
+  &__greeting-text {
+    @include subheader;
+  }
+  &__greeting-highlight {
+    color: $tertiary-color;
+  }
+  &__heading {
+    @include header-large;
+  }
+  &__text-highlight {
+    color: $tertiary-color;
+  }
+}
+
+// about me section text styling
+
+.about-me {
+  color: $primary-color;
+  &__header {
+    text-decoration: underline 0.2rem $tertiary-color;
+    @include header-normal;
+    text-align: center;
+  }
+  &__paragraph {
+    @include text-normal;
+  }
+}
+// technical-skills text styling
+
+.technical-skills {
+  color: $secondary-color;
+  text-align: center;
+  &__header {
+    @include header-normal;
+  }
+}
+
+// icon grid section text styling
+.icon-grid {
+  &__caption {
+    @include text-smaller;
+  }
+}
+
+// My projects section text styling
+// section level styling
+.card-block {
+  &__header {
+    @include header-normal;
+    color: $primary-color;
+  }
+}
+// Card text styling
+.card {
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+  &__sub-heading {
+    @include text-normal;
+    font-weight: calc($regular-weight * 1.2);
+  }
+  &__heading {
+    @include header-normal;
+  }
+  &__button {
+    @include text-smaller;
+  }
+  &-one {
+    color: $tertiary-color;
+  }
+  &-two {
+    color: $primary-color;
+  }
+  &-three {
+    color: $primary-color;
+  }
+  &-four {
+    color: $primary-color;
+  }
+  &-five {
+    color: $primary-color;
+  }
+  &-six {
+    color: $primary-color;
+  }
+}
+
+// footer text styling
+.footer {
+  &__email-link {
+    color: $tertiary-color;
+    &:hover {
+      color: $secondary-color;
+      text-shadow: 2rem;
+      &::first-letter {
+        font-size: 1.3rem;
+        color: $tertiary-color;
+      }
     }
-    // technical-skills text styling
-
-    .technical-skills {
-        color: $secondary-color;
-        text-align: center;
-        &__header {
-            @include header-normal;
-        }
-    }
-
-        // icon grid section text styling
-        .icon-grid {
-            &__caption {
-                @include text-smaller;
-            }
-        }
-
-    // My projects section text styling
-    // section level styling
-    .card-block {
-        &__header {
-            @include header-normal;
-            color: $primary-color;
-        }
-    }
-        // Card text styling
-        .card {
-            opacity: 0.85;
-            transition: opacity 0.5s ease;
-            &__sub-heading {
-                @include text-normal;
-                font-weight: calc($regular-weight * 1.2);
-            }
-            &__heading {
-                @include header-normal;
-            }
-            &__button {
-                @include text-smaller;
-            }
-            &-one{
-                color: $tertiary-color;
-            }
-            &-two {
-                color: $primary-color;
-            }
-            &-three {
-                color: $secondary-color;
-            }
-            &-four {
-                color: $primary-color;
-            }
-            &-five {
-                color: $primary-color;
-            }
-            &-six {
-                color: $primary-color;
-            }
-        }
-
-    // footer text styling
-    .footer {
-        &__email-link {
-            color: $tertiary-color;
-            &:hover{
-                color: $secondary-color;
-                text-shadow: 2rem;
-                &::first-letter {
-                    font-size: 1.3rem;
-                    color: $tertiary-color;
-                }
-                &::after {
-                    content: " <--60% of the time he overcomplicates it every time";
-                    color: $tertiary-color;
-                    font-size: 1rem;
-                }
-            }
-        }
-        &__link {
-            color: $secondary-color;
-        }
-    }
+  }
+  &__link {
+    color: $secondary-color;
+  }
+}

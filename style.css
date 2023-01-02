@@ -32,8 +32,15 @@ body {
   color: #f06423;
 }
 .top-banner .navigation-menu__link:hover {
+  border-radius: 20px;
   color: #ffffff;
   background-color: #f06423;
+}
+.top-banner .navigation-menu__link:active {
+  color: black;
+  box-shadow: inset 0px 0px 0px 17px rgba(255, 255, 255, 0.95);
+  -webkit-text-decoration: underline 3px #ffffff;
+          text-decoration: underline 3px #ffffff;
 }
 
 .header__greeting-text {
@@ -65,7 +72,7 @@ body {
   font-size: 2rem;
   text-align: center;
 }
-.about-me__paragraph-one, .about-me__paragraph-two {
+.about-me__paragraph {
   font-family: "Montserrat", Verdana;
   font-weight: 300;
   font-size: 1rem;
@@ -123,7 +130,7 @@ body {
   color: #1e1e1e;
 }
 .card-three {
-  color: #ffffff;
+  color: #1e1e1e;
 }
 .card-four {
   color: #1e1e1e;
@@ -145,11 +152,6 @@ body {
 .footer__email-link:hover::first-letter {
   font-size: 1.3rem;
   color: #f06423;
-}
-.footer__email-link:hover::after {
-  content: " <--60% of the time he overcomplicates it every time";
-  color: #f06423;
-  font-size: 1rem;
 }
 .footer__link {
   color: #ffffff;
@@ -302,6 +304,12 @@ body {
   align-items: center;
   padding: 1rem;
 }
+.card:nth-child(2n):hover {
+  box-shadow: inset 0px 0px 0px 9px rgb(30, 30, 30);
+}
+.card:nth-child(2n-1):hover {
+  box-shadow: inset 0px 0px 0px 9px #f06423;
+}
 .card__image-container {
   width: 80%;
   padding: 1rem;
@@ -367,13 +375,19 @@ body {
   justify-content: space-evenly;
 }
 .footer__navigation-menu .footer__link {
-  background-color: #f06423;
-  border-radius: 5px;
-  padding: 0.05rem;
+  aspect-ratio: 1/1;
+  background-color: #1e1e1e;
+  border-radius: 20px;
   display: block;
+  height: 100%;
+  width: 30%;
 }
 .footer__navigation-menu .footer__link .footer__icon {
-  width: 2rem;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
   background-color: #ffffff;
 }
 
@@ -477,10 +491,13 @@ body {
     margin-top: 1%;
   }
   .main-content-block .card-block .card-block__cards-container {
+    margin: auto;
+    max-width: 80vw;
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 10px;
   }
   .main-content-block .card-block .card-block__cards-container .card {
     border-radius: 10px;
@@ -523,6 +540,7 @@ body {
     grid-row: 1/2;
     border: 2px solid #f06423;
     background-color: #1e1e1e;
+    color: #f06423;
   }
   .main-content-block .card-block .card-block__cards-container .card-four {
     grid-column: 1/2;
@@ -558,16 +576,18 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .footer .footer__navigation-menu .footer__link {
-    padding: 0.2rem;
-  }
-  .footer .footer__navigation-menu .footer__link .footer__icon {
+  .footer .footer__navigation-menu .footer__icon {
     border-radius: 40%;
     width: 4rem;
     height: 4rem;
-    background-color: #f06423;
     color: #ffffff;
     padding: 0;
+  }
+  .footer .footer__navigation-menu .footer__icon:active {
+    border: 4px solid #f06423;
+    box-shadow: 0px 0px 7px 7px rgba(255, 255, 255, 0.95);
+    -webkit-text-decoration: underline 3px #ffffff;
+            text-decoration: underline 3px #ffffff;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -577,7 +597,8 @@ body {
   .navigation-menu__link {
     font-size: 1.7rem;
   }
-  .header__greeting-text, .header__text-highlight {
+  .header__greeting-text,
+.header__text-highlight {
     font-family: "Manrope", sans-serif;
     font-weight: 900;
     font-size: 3rem;

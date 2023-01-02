@@ -5,467 +5,468 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap");
 
-
-// class for hidden on mobile but to show on larger screens
-// creat sass maps for font styles / size and colours
-// create mixins with arguments to use for coloured borders and hover effects
-// adjust header layour so sizing is on the text boxes not on the actual container
-
 // layouts
 
 body {
-    background-color: $primary-color;
-    color: $secondary-color;
-    display: grid;
-    grid-template-columns: 100%;  
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: grid;
+  grid-template-columns: 100%;
 }
 
-    .header {
-        grid-row: 1 / 2;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        padding: 1rem;
+.header {
+  grid-row: 1 / 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 1rem;
 
-        &__text-container {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 1rem;
-        }
-            &__greeting-text {
-                display: block;
-                width: 80%;
-                margin-bottom: 1rem;
-            }
-            &__heading {
-                width: 80%;
-            }
-                
-            
-            
-            
-    }        
-    // main content layout
-    .main-content-block {
-        grid-row: 2 / 3;
-        display: grid;
-        grid-template-columns: 1fr;
-        background-color: $secondary-color;
-        
-    }
-        // about me section layout
-        .about-me {
-            grid-row: 1 / 2;
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 0.5rem;
-            background-color: $secondary-color;
-            &__header {
-                padding: 0.5rem;
-            }
-            &__figure {
-                width: 75%;
-                align-self: center;
-                display: flex;
-                padding: 2rem;
-                max-width: 30rem;
-            }
-                &__photo {
-                    border-radius: 8px;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-            &__text-content {
-                max-width: 30rem;
-                padding: 1rem;
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
-            }
-                &__paragraph-one {
-                    padding: 0.5rem;
-                }
-                &__paragraph-two {
-                    padding: 0.5rem;
-
-                }
-        }
-        // technical skill section layout
-        .technical-skills {
-            grid-row: 2 / 3;
-            background-color: $tertiary-color;
-            padding: 1rem;
-            &__header {
-                text-align: center;
-                padding: 1rem;
-            }
-            &__paragraph {
-                text-align: center;
-                padding: 1rem;
-            }
-        }
-            // technical skills icon grid layout
-            .icon-grid {
-                display: inline-grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 0.2rem;
-                padding: 0.4rem;
-                background-color: $secondary-color;
-                // container for eaach grid item - image + caption
-                &__container{
-                    border-radius: 8px;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    max-height: 10rem;
-                    border: 3px solid black;
-                }
-                // icon image
-                    &__icon {
-                        display: block;
-                        width: 100%;
-                        height: 65%;
-                        background-color: $secondary-color;
-                    }
-                    // icon caption
-                    &__caption {
-                        border-radius: 3px;
-                        border: 1px solid black;
-                        color: $tertiary-color;
-                        height: 35%;
-                        padding-top: 1rem;
-                        background-color: $primary-color;
-                    }
-            }
-        // my projects layout - cards
-        .card-block {
-            background-color: $secondary-color;
-            grid-row: 3 / 4;
-            display: grid;
-            grid-template-columns: 1fr;
-            &__header {
-                grid-row: 1 / 2;
-                text-align: center;
-                padding: 1rem;
-            }
-            &__cards-container {
-                background-color: $secondary-color;
-                grid-row: 2 / 3;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-areas: 1fr 1fr 1fr;
-
-            }
-        }
-            // General card layout
-            .card {
-            background-color: $primary-color;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 1rem;
-                // card image container
-                &__image-container {
-                    width: 80%;
-                    padding: 1rem;
-                }
-                    // card image
-                    &__image {
-                        width: 100%;                 
-                    }
-                // card text content container
-                &__text-content {
-                    padding: 1rem;
-                }
-                
-                // individual card positioning
-                &-one {
-                    background-color: $primary-color;
-                    grid-column: 1 / 2;
-                    grid-row: 1 / 2;
-                    .card__image-container {
-                        background-color: $tertiary-color;
-                    }
-                }
-                &-two {
-                    background-color: $secondary-color;
-                    grid-column: 1 / 2;
-                    grid-row: 2 / 3;
-                    .card__image-container {
-                        background-color: $tertiary-color;
-                    }
-                }
-                &-three {
-                    background-color: $tertiary-color;                   
-                    grid-column: 1 / 2;
-                    grid-row: 3 / 4;
-                    .card__image-container {   
-                        background-color: $primary-color;
-                    }
-                }
-                &-four {
-                    display: none;
-                }
-                &-five {
-                    display: none;
-                }
-                &-six {
-                    display: none;
-                }
-        }
-    // footer layout
-    .footer {
-    grid-row: 3 / 4;
-    width: auto;
+  &__text-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
     align-items: center;
-        &__email-link {
-        padding: 1rem;
-        display: block;
-        text-align: center;
-        }
-        &__navigation-menu {
-            width: 10rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            .footer__link {
-                background-color: $tertiary-color;
-                border-radius: 5px;
-                padding: 0.05rem;
-                display: block;
-                .footer__icon {
-                    width: 2rem;
-                    background-color: $secondary-color;
-                }
-            }
-        }
-    
-    }
-    
-
-
-@media screen and (min-width:1024px) {
-.show--large-screen {
-    display: unset;
+    padding: 1rem;
+  }
+  &__greeting-text {
+    display: block;
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  &__heading {
+    width: 80%;
+  }
 }
-.top-banner {
+// main content layout
+.main-content-block {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $secondary-color;
+}
+// about me section layout
+.about-me {
+  grid-row: 1 / 2;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  background-color: $secondary-color;
+  &__header {
+    padding: 0.5rem;
+  }
+  &__figure {
+    width: 75%;
+    align-self: center;
+    display: flex;
+    padding: 2rem;
+    max-width: 30rem;
+  }
+  &__photo {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__text-content {
+    max-width: 30rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__paragraph-one {
+    padding: 0.5rem;
+  }
+  &__paragraph-two {
+    padding: 0.5rem;
+  }
+}
+// technical skill section layout
+.technical-skills {
+  grid-row: 2 / 3;
+  background-color: $tertiary-color;
+  padding: 1rem;
+  &__header {
+    text-align: center;
+    padding: 1rem;
+  }
+  &__paragraph {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+// technical skills icon grid layout
+.icon-grid {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.2rem;
+  padding: 0.4rem;
+  background-color: $secondary-color;
+  // container for eaach grid item - image + caption
+  &__container {
+    border-radius: 8px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    max-height: 10rem;
+    border: 3px solid black;
+  }
+  // icon image
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 65%;
+    background-color: $secondary-color;
+  }
+  // icon caption
+  &__caption {
+    border-radius: 3px;
+    border: 1px solid black;
+    color: $tertiary-color;
+    height: 35%;
+    padding-top: 1rem;
+    background-color: $primary-color;
+  }
+}
+// my projects layout - cards
+.card-block {
+  background-color: $secondary-color;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  &__header {
+    grid-row: 1 / 2;
+    text-align: center;
+    padding: 1rem;
+  }
+  &__cards-container {
+    background-color: $secondary-color;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 1fr 1fr 1fr;
+  }
+}
+// General card layout
+.card {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  &:nth-child(2n) {
+    &:hover {
+      box-shadow: inset 0px 0px 0px 9px rgba(30, 30, 30, 1);
+    }
+  }
+  &:nth-child(2n - 1) {
+    &:hover {
+      box-shadow: inset 0px 0px 0px 9px $tertiary-color;
+    }
+  }
+  // card image container
+  &__image-container {
+    width: 80%;
+    padding: 1rem;
+  }
+  // card image
+  &__image {
+    width: 100%;
+  }
+  // card text content container
+  &__text-content {
+    padding: 1rem;
+  }
+
+  // individual card positioning
+  &-one {
+    background-color: $primary-color;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    .card__image-container {
+      background-color: $tertiary-color;
+    }
+  }
+  &-two {
+    background-color: $secondary-color;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    .card__image-container {
+      background-color: $tertiary-color;
+    }
+  }
+  &-three {
+    background-color: $tertiary-color;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    .card__image-container {
+      background-color: $primary-color;
+    }
+  }
+  &-four {
+    display: none;
+  }
+  &-five {
+    display: none;
+  }
+  &-six {
+    display: none;
+  }
+}
+// footer layout
+.footer {
+  grid-row: 3 / 4;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &__email-link {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+  }
+  &__navigation-menu {
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    .footer__link {
+      aspect-ratio: 1 / 1;
+      background-color: $primary-color;
+      border-radius: 20px;
+      display: block;
+      height: 100%;
+      width: 30%;
+      .footer__icon {
+        object-fit: scale-down;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .show--large-screen {
+    display: unset;
+  }
+  .top-banner {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 25% 20% 30% 25%;
     justify-items: center;
     padding: 0.5rem;
-        .top-banner__logo-container{
-            grid-column: 1 / 3;
-            
-        }
-    .top-banner__navigation-menu {
-        grid-column: 3 / 5;
-
-        .navigation-menu__link {
-            padding: 1rem;
-        }
+    .top-banner__logo-container {
+      grid-column: 1 / 3;
     }
-}
-.header {
+    .top-banner__navigation-menu {
+      grid-column: 3 / 5;
+
+      .navigation-menu__link {
+        padding: 1rem;
+      }
+    }
+  }
+  .header {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: repeat (4, 1fr);
     .header__text-container {
-        grid-column: 2 / 3;
-        grid-row: 2 / 4;
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
     }
     .header__image {
-        display: block;
-        grid-column: 3 / 4;
-        grid-row: 2 / 4;
-        width: 100%;
+      display: block;
+      grid-column: 3 / 4;
+      grid-row: 2 / 4;
+      width: 100%;
     }
-}
-.main-content-block {
+  }
+  .main-content-block {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     .about-me {
-        padding: 2rem;
-        display: grid;
-        justify-content: stretch;
-        align-items: stretch;
-        .about-me__header {
-            text-align: left;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            align-self: flex-end;
-        }
-        .about-me__figure {
-            grid-column: 1 / 2;
-            grid-row: 1 / 4;
-            justify-self: center;
-        }
-        .about-me__text-content {
-            width: 100%;
-            padding: unset;
-            text-align: left;
-            grid-column: 2 / 3;
-            grid-row: 2 / 4;
-            align-self: flex-start;
-        }
+      padding: 2rem;
+      display: grid;
+      justify-content: stretch;
+      align-items: stretch;
+      .about-me__header {
+        text-align: left;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+      }
+      .about-me__figure {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        justify-self: center;
+      }
+      .about-me__text-content {
+        width: 100%;
+        padding: unset;
+        text-align: left;
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        align-self: flex-start;
+      }
     }
     .technical-skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        .technical-skills__header {
-            color: $primary-color;
-        }  
-        .icon-grid {
-            padding: 2rem;
-            border: 2px solid $secondary-color;
-            background-color: $primary-color;
-            display: inline-grid;
-            grid-template-rows: 1fr;
-                .icon-grid__container {
-                    width: 7rem;
-                    grid-row: 1 / 2;
-                    background-color: $secondary-color;
-                    .icon-grid__icon {
-                        width: 100%;
-                        background-color: $secondary-color;
-                    
-                    }
-                    .icon-grid__caption{
-                        background-color: $tertiary-color;
-                        color: $secondary-color;
-                    }
-                }
-                
-            }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .technical-skills__header {
+        color: $primary-color;
+      }
+      .icon-grid {
+        padding: 2rem;
+        border: 2px solid $secondary-color;
+        background-color: $primary-color;
+        display: inline-grid;
+        grid-template-rows: 1fr;
+        .icon-grid__container {
+          width: 7rem;
+          grid-row: 1 / 2;
+          background-color: $secondary-color;
+          .icon-grid__icon {
+            width: 100%;
+            background-color: $secondary-color;
+          }
+          .icon-grid__caption {
+            background-color: $tertiary-color;
+            color: $secondary-color;
+          }
         }
-    .card-block {
-        margin-top: 1%;
-        .card-block__cards-container {
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            .card {
-                border-radius: 10px;
-                background-color: $secondary-color;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                padding: 2rem;
-                .card__image-container {
-                    border-radius: 8px;
-                    background-color: $tertiary-color;
-                    width: 80%;
-                    padding: 1rem;
-                    .card-image {
-                        width: 100%;
-                    }
-                }
-                .card__text-content {
-                    padding: 1rem;
-                    .card__sub-heading {
-                        text-decoration: solid underline $tertiary-color 3px;
-                    }
-                }
-            } 
-            .card-one {
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
-                border: 2px solid $tertiary-color;
-                background-color: $primary-color;
-            }
-            .card-two {
-                grid-column: 2 / 3;
-                grid-row: 1 / 2;
-                border: 2px solid $primary-color;
-            }
-            .card-three {
-                grid-column: 3 / 4;
-                grid-row: 1 / 2;
-                border: 2px solid $tertiary-color;
-                background-color: $primary-color;
-            }
-            .card-four {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-                border: 2px solid $tertiary-color;
-            }
-            .card-five {
-                grid-column: 2 / 3;
-                grid-row: 2 / 3;
-                border: 2px solid $tertiary-color;
-                background-color: $primary-color;
-                color: $tertiary-color;
-            }
-            .card-six {
-                grid-column: 3 / 4;
-                grid-row: 2 / 3;
-                border: 2px solid $tertiary-color;
-            }
-        }
+      }
     }
-}
-.footer{
+    .card-block {
+      margin-top: 1%;
+      .card-block__cards-container {
+        margin: auto;
+        max-width: 80vw;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        .card {
+          border-radius: 10px;
+          background-color: $secondary-color;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 2rem;
+          .card__image-container {
+            border-radius: 8px;
+            background-color: $tertiary-color;
+            width: 80%;
+            padding: 1rem;
+            .card-image {
+              width: 100%;
+            }
+          }
+          .card__text-content {
+            padding: 1rem;
+            .card__sub-heading {
+              text-decoration: solid underline $tertiary-color 3px;
+            }
+          }
+        }
+        .card-one {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          border: 2px solid $tertiary-color;
+          background-color: $primary-color;
+        }
+        .card-two {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+          border: 2px solid $primary-color;
+        }
+        .card-three {
+          grid-column: 3 / 4;
+          grid-row: 1 / 2;
+          border: 2px solid $tertiary-color;
+          background-color: $primary-color;
+          color: $tertiary-color;
+        }
+        .card-four {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          border: 2px solid $tertiary-color;
+        }
+        .card-five {
+          grid-column: 2 / 3;
+          grid-row: 2 / 3;
+          border: 2px solid $tertiary-color;
+          background-color: $primary-color;
+          color: $tertiary-color;
+        }
+        .card-six {
+          grid-column: 3 / 4;
+          grid-row: 2 / 3;
+          border: 2px solid $tertiary-color;
+        }
+      }
+    }
+  }
+  .footer {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     display: grid;
-    
-    padding: 2rem;
-        .footer__email-link {
-            grid-column: 1 / 2;
-            padding: 1rem;
-        }
-        .footer__navigation-menu {
-            grid-column:  3 / 4;
-            width: 20vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            .footer__link {
-                padding: 0.2rem;
-                .footer__icon {
-                border-radius: 40%;
-                width: 4rem;
-                height: 4rem;
-                background-color: $tertiary-color;
-                color: $secondary-color;
-                padding: 0;
-                }
-            }
-        }
-    }
 
+    padding: 2rem;
+    .footer__email-link {
+      grid-column: 1 / 2;
+      padding: 1rem;
+    }
+    .footer__navigation-menu {
+      grid-column: 3 / 4;
+      width: 20vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .footer__icon {
+        border-radius: 40%;
+        width: 4rem;
+        height: 4rem;
+        color: $secondary-color;
+        padding: 0;
+        &:active {
+          border: 4px solid $tertiary-color;
+          box-shadow: 0px 0px 7px 7px rgba(255, 255, 255, 0.95);
+          text-decoration: underline 3px $secondary-color;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {
-* {
+  * {
     font-size: 20px;
-    }
-    .navigation-menu__link {
-        font-size: 1.7rem;
-    }
-    .header__greeting-text, .header__text-highlight {
-        @include header-large;
-    }
+  }
+  .navigation-menu__link {
+    font-size: 1.7rem;
+  }
+  .header__greeting-text,
+  .header__text-highlight {
+    @include header-large;
+  }
 }
 @media screen and (min-width: 1700px) {
-    * {
-        font-size: 25px;
-    }
+  * {
+    font-size: 25px;
+  }
 }
